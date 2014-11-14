@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<p>Sartu ezazu 1 eta 10 arteko zenbaki bat:</p>
+	<input id="num" type="number">
+	<button type="button" onclick="funtzioa()">Bidali</button>
+	<!--Hemen zenbakia sartzean agertuko den testua agertuko da-->
+	<p id="emaitza"></p>
+	<script type="text/javascript">
+	function funtzioa () {
+		var zen, testu;
+		zen = document.getElementById("num").value;
+		if (isNaN(zen) || zen < 1 || zen > 10) {
+			testu = "Zenbaki baliogabea";
+		} else{
+			testu = "Zenbaki zuzena";
+		};
+		//Hemen testu aldagaia emaitza identifikatzailean sartzen da.
+		document.getElementById("emaitza").innerHTML = testu;
+		// body...
+	}
+	</script>
+</body>
+</html>
